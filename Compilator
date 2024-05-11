@@ -1,0 +1,7 @@
+DIRS := ganSOsLibrary/Debug Consola/Debug cpu/Debug/ FileSystem/Debug/ Kernel/Debug/ Memoria/Debug/
+
+all:
+	@for dir in $(DIRS); do \
+		echo "Compiling in $${dir}"; \
+		(cd $$dir && $(MAKE) all); \
+	done
